@@ -89,7 +89,9 @@ class GiveAction extends AbstractAction  {
 	}
 
 	public void actionPerformed(ActionEvent event) {
-		gui.displayMessage("You need to write the code here to have " + player + " give " + item + " to " + recipient);
+		player.give(item, recipient); // this is the essential of what should happen
+		// display a message
+		gui.displayMessage(player + " has given " + item + " to " + recipient);
 		gui.playTurn();
 	}
 }

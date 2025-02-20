@@ -47,7 +47,7 @@ public class GackWorld extends World {
 		computerLab.addNewNeighbor("east", lounge);
 		offices.addNewNeighbor("north", lounge);
 		
-		new AutoPerson("Max", offices, 2);
+		new AutoPerson("Max", dormitory, 2);
 		new AutoPerson("Karl", computerLab, 4);
 		new Witch("Barbara", offices, 3, pond);
 		new Wizard("Elvee", offices, 1, chamberOfWizards);

@@ -106,9 +106,20 @@ public class Person {
 		}
 	}
 	
-	public void give(Thing thing, Person person) {
-		if (equals(thing.getOwner())) {
-			thing.setOwner(person);
+	// add something for person to be able to give to another person
+	public void give(Thing thing, Person recipient) {
+		// check is thing's owner is me
+		// if it's not my thing to give, output an error
+		if (!equals(thing.getOwner())) {
+			Utility.displayMessage(this + " does not have " + thing);
+		}
+		else {
+			// my inventory should lose the thing, recipient's inventory gain, thing ownership change
+			thing.becomeUnowned();
+			this.possessions.remove(thing);
+			recipient.possessions.add(thing);
+			thing.setOwner(recipient);
+			this.say("Here, have my charity " + thing + " to " + recipient);
 		}
 	}
 	
