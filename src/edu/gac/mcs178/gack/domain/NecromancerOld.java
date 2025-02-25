@@ -4,21 +4,20 @@ import java.util.List;
 import java.util.Random;
 
 
-public class Necromancer extends AutoPerson {
+public class Necromancer extends Autoperson {
 
-	private Place goodShipOlin;
+	private Place goodShipOlin
 	
-	public Necromancer(String name, Place place, int threshold) {
+	public Necromance(String name, Place place, int threshold) {
 		super(name, place, threshold);
 	}
 		
 	public void challenge(Person person) {
 			say("Welcome traveller, an object to aid you on your journey" + person);
 			if (duel(person)==1) {
-				say("You have emerged victorious, look around for your spoils!");
+				say("You have emerged victorious, look around for your spoils!")
 			} else {
-				say("Victory was not yours today, better luck next time.");
-	}
+				say("Victory was not yours today, better luck next time.")
 	}
 	
 	
@@ -27,9 +26,9 @@ public class Necromancer extends AutoPerson {
 		int rand_int = rand.nextInt(100);
 		if (rand_int % 2 == 0) {
 			goodShipOlin.gain(new Scroll("Magic Stone"));
-			return 1; //win
+			return 1 //win
 		} else {
-			return 0; //loss
+			return 0 //loss
 		}
 	}
 	

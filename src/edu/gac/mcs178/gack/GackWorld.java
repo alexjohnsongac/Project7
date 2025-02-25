@@ -1,6 +1,7 @@
 package edu.gac.mcs178.gack;
 
 import edu.gac.mcs178.gack.domain.AutoPerson;
+import edu.gac.mcs178.gack.domain.Necromancer;
 import edu.gac.mcs178.gack.domain.Person;
 import edu.gac.mcs178.gack.domain.Place;
 import edu.gac.mcs178.gack.domain.Scroll;
