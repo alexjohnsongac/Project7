@@ -6,7 +6,7 @@ import java.util.Random;
 
 public class Necromancer extends Autoperson {
 
-	private Place goodShipOlin
+	private Place goodShipOlin;
 	
 	public Necromance(String name, Place place, int threshold) {
 		super(name, place, threshold);
