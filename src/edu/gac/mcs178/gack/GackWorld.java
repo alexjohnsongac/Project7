@@ -55,6 +55,8 @@ public class GackWorld extends World {
 		// add new witch to lund
 		new Witch("Jacob", lund, 2, pond);
 		
+		//adding new person thing
+		
 		lounge.gain(new Thing("Karl's glasses"));
 		
 		library.gain(new Scroll("Scroll of Enlightenment"));
@@ -74,4 +76,4 @@ public class GackWorld extends World {
 	}
 }
 
-//test comment
+//Thing to add for exercise 14.35: 
