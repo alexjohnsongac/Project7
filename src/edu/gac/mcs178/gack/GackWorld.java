@@ -1,6 +1,7 @@
 package edu.gac.mcs178.gack;
 
 import edu.gac.mcs178.gack.domain.AutoPerson;
+import edu.gac.mcs178.gack.domain.Necromancer;
 import edu.gac.mcs178.gack.domain.Person;
 import edu.gac.mcs178.gack.domain.Place;
 import edu.gac.mcs178.gack.domain.Scroll;
@@ -56,6 +57,7 @@ public class GackWorld extends World {
 		new Witch("Jacob", lund, 2, pond);
 		
 		//adding new person thing
+		new Necromancer("Larry", goodShipOlin, 1000000);
 		
 		lounge.gain(new Thing("Karl's glasses"));
 		
