@@ -39,7 +39,7 @@ public class Necromancer extends AutoPerson {
 		Random rand = new Random();
 		int rand_int = rand.nextInt(100);
 		if (rand_int % 2 == 0) {
-			goodShipOlin.gain(new Scroll("Magic Stone"));
+			goodShipOlin.gain(new Thing("Magic Stone"));
 			return 1; //win
 		} else {
 			return 0; //loss
