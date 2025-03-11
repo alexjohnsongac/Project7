@@ -12,7 +12,12 @@ public class Necromancer extends AutoPerson {
 	
 	public Necromancer(String name, Place place, int threshold) {
 		super(name, place, threshold);
+		Thing ms = new Thing("Magic Stone");
+		this.possessions.add(ms);
+		ms.setOwner(this);
 	}
+	
+	
 	
 	@Override
 	public void act() {
@@ -39,11 +44,12 @@ public class Necromancer extends AutoPerson {
 		Random rand = new Random();
 		int rand_int = rand.nextInt(100);
 		if (rand_int % 2 == 0) {
-			goodShipOlin.gain(new Thing("Magic Stone"));
+			give(this.possessions.get(0), person);
 			return 1; //win
 		} else {
 			return 0; //loss
 		}
+		//goodShipOlin.gain(new Thing("Magic Stone"));
 	}
 	
 	//add a move around method like the other people
