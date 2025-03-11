@@ -3,6 +3,8 @@ package edu.gac.mcs178.gack.domain;
 import java.util.List;
 import java.util.Random;
 
+import edu.gac.mcs178.gack.Utility;
+
 
 public class Necromancer extends AutoPerson {
 
@@ -11,6 +13,19 @@ public class Necromancer extends AutoPerson {
 	public Necromancer(String name, Place place, int threshold) {
 		super(name, place, threshold);
 	}
+	
+	@Override
+	public void act() {
+		List<Person> others = otherPeopleAtSamePlace();
+		if (!others.isEmpty()) {
+			Person victim = others.get(Utility.randInt(others.size()));
+			if (victim instanceof Person) {
+			challenge(victim);
+			}
+		} else {
+			super.act();
+		}
+	}
 		
 	public void challenge(Person person) {
 			say("Welcome traveller, an object to aid you on your journey" + person);
@@ -18,7 +33,7 @@ public class Necromancer extends AutoPerson {
 				say("You have emerged victorious, look around for your spoils!");
 			} else {
 				say("Victory was not yours today, better luck next time.");
-	}
+			}
 	}
 	
 	
@@ -34,4 +49,6 @@ public class Necromancer extends AutoPerson {
 	}
 	
 	//add a move around method like the other people
+	
+	
 }
