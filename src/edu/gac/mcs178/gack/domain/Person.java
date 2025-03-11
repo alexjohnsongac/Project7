@@ -9,7 +9,7 @@ public class Person {
 	
 	private String name;
 	private Place place;
-	private List<Thing> possessions;
+	protected List<Thing> possessions;
 	
 	public String getName() { return name; }
 	public void setName(String name) { this.name = name; }
