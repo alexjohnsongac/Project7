@@ -22,13 +22,11 @@ public class Necromancer extends AutoPerson {
 			if (victim instanceof Person) {
 			challenge(victim);
 			}
-		} else {
-			super.act();
-		}
+		} 
 	}
 		
 	public void challenge(Person person) {
-			say("Welcome traveller, an object to aid you on your journey" + person);
+			say("Welcome traveller, an object to aid you on your journey " + person);
 			if (duel(person)==1) {
 				say("You have emerged victorious, look around for your spoils!");
 			} else {

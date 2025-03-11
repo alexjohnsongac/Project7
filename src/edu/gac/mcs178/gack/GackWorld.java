@@ -57,7 +57,7 @@ public class GackWorld extends World {
 		new Witch("Jacob", lund, 2, pond);
 		
 		//adding new person thing
-		new Necromancer("Larry", goodShipOlin, 1000000);
+		new Necromancer("Larry the Necromancer", goodShipOlin, 1);
 		
 		lounge.gain(new Thing("Karl's glasses"));
 		
